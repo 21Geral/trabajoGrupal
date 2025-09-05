@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+
+  <body class="w-screen h-screen flex items-center justify-center bg-white">
+    <div id="fondo">
+      <button
+        id="abrir"
+        type="button"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        +
+      </button>
+
+      <div class="relative overflow-x-auto">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+              <th scope="col" class="px-6 py-3">Nombre</th>
+              <th scope="col" class="px-6 py-3">Edad</th>
+              <th scope="col" class="px-6 py-3">pais</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">gabriel</th>
+              <td class="px-6 py-4">21</td>
+              <td class="px-6 py-4">argentina</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal" class="w-full h-full bg-black/50 hidden flex items-center justify-center">
+      <form id="formulario" class="max-w-md mx-auto bg-white p-4">
+        <p id="cerrar">x</p>
+
+        <!-- Nombre -->
+        <div class="relative z-0 w-full mb-5 group">
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 peer"
+            placeholder=" "
+            required
+          />
+          <label for="nombre" class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3">nombre</label>
+        </div>
+
+        <!-- Edad -->
+        <div class="relative z-0 w-full mb-5 group">
+          <input
+            type="number"
+            id="edad"
+            name="edad"
+            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 peer"
+            placeholder=" "
+            required
+          />
+          <label for="edad" class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3">edad</label>
+        </div>
+
+        <!-- País -->
+        <div class="grid md:grid-cols-2 md:gap-6">
+          <div class="relative z-0 w-full mb-5 group">
+            <input
+              type="text"
+              id="pais"
+              name="pais"
+              class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 peer"
+              placeholder=" "
+              required
+            />
+            <label for="pais" class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3">pais</label>
+          </div>
+        </div>
+
+        <!-- Botón -->
+        <button
+          type="submit"
+          id="enviar"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+        >
+          enviar
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
